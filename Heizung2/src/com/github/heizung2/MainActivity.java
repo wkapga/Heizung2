@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
  
         ImageView imgView =(ImageView)findViewById(R.id.ImageView1);
         
-        UrlImageViewHelper.setUrlDrawable(imgView, "http://www.lcc-wien.at/images/stories/lichtscheidl/mastersms_234a.jpg");
+        UrlImageViewHelper.setUrlDrawable(imgView, "http://keyrate2.dyndns.org:8181/rrd/png2.png");
         
         
     }
