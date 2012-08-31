@@ -44,19 +44,31 @@ public class MainActivity extends Activity  implements OnClickListener {
  
         
         Button1 = (Button) findViewById(R.id.Button1);
+        Button2 = (Button) findViewById(R.id.Button2);
+        Button3 = (Button) findViewById(R.id.Button3);
+        Button4 = (Button) findViewById(R.id.Button4);
+        Button5 = (Button) findViewById(R.id.Button5);
+        Button6 = (Button) findViewById(R.id.Button6);
+        Button7 = (Button) findViewById(R.id.Button7);
+        
+        imgView =(ImageView)findViewById(R.id.ImageView1);
+        
         SelectedLabel = (TextView) findViewById(R.id.TextView1);        
         
         Button1.setOnClickListener( this);
-        
+        Button2.setOnClickListener( this);
+        Button3.setOnClickListener( this);
+        Button4.setOnClickListener( this);
+        Button5.setOnClickListener( this);
+        Button6.setOnClickListener( this);
+        Button7.setOnClickListener( this);
         
         sel1 = 1;
         sel2 = 1;
         
         
-        grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+".png";
-        
-         imgView =(ImageView)findViewById(R.id.ImageView1);
-        
+        grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+sel2+".png";
+                
         UrlImageViewHelper.setUrlDrawable(imgView, grafurl);
         
         
@@ -64,8 +76,33 @@ public class MainActivity extends Activity  implements OnClickListener {
  
     public void onClick(View v) {
     	if(v == Button1) {
-    		UrlImageViewHelper.setUrlDrawable(imgView, "http://keyrate2.dyndns.org:8181/rrd/png4.png");
+    		sel1=1;
+    	} 
+    	else if(v == Button2) {
+    		sel1=2;
     	}
+    	else if(v == Button3) {
+    		sel1=3;
+    	}
+    	else if(v == Button4) {
+    		sel1=4;
+    	}
+    	else if(v == Button5) {
+    		sel2=1;
+    	}
+    	else if(v == Button6) {
+    		sel2=2;
+    	}
+    	else if(v == Button7) {
+    		sel2=3;
+    	}
+
+    	grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+sel2+".png";
+        
+        UrlImageViewHelper.setUrlDrawable(imgView, grafurl);
+    
+    
+    
     }
     
  
