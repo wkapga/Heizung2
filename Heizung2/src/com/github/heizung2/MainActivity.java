@@ -5,17 +5,20 @@ import java.net.URL;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 
 
  
-public class MainActivity extends Activity {
+public class MainActivity extends Activity  implements OnClickListener {
 	protected Button Button1;
 	protected Button Button2;
 	protected Button Button3;
@@ -31,7 +34,7 @@ public class MainActivity extends Activity {
 	protected int sel1;
 	protected int sel2;
 	protected String grafurl;
-	
+	protected ImageView imgView;
 	
 	/** Called when the activity is first created. */
     @Override
@@ -39,38 +42,31 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
  
-        /*
-        ImageView imgView =(ImageView)findViewById(R.id.ImageView1);
-        Drawable drawable = LoadImageFromWeb("http://www.lcc-wien.at/images/stories/lichtscheidl/mastersms_234a.jpg");
-        imgView.setImageDrawable(drawable);
- 		*/
+        
+        Button1 = (Button) findViewById(R.id.Button1);
+        SelectedLabel = (TextView) findViewById(R.id.TextView1);        
+        
+        Button1.setOnClickListener( this);
+        
+        
         sel1 = 1;
         sel2 = 1;
         
         
         grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+".png";
         
-        ImageView imgView =(ImageView)findViewById(R.id.ImageView1);
+         imgView =(ImageView)findViewById(R.id.ImageView1);
         
         UrlImageViewHelper.setUrlDrawable(imgView, grafurl);
         
         
     }
  
- /*
-    private Drawable LoadImageFromWeb(String url)
-   {
-  try
-  {
-   InputStream is = (InputStream) new URL(url).getContent();
-   Drawable d = Drawable.createFromStream(is, "src name");
-   return d;
-  }catch (Exception e) {
-   System.out.println("Exc="+e);
-   return null;
-  }
- }
- 
- */
+    public void onClick(View v) {
+    	if(v == Button1) {
+    		UrlImageViewHelper.setUrlDrawable(imgView, "http://keyrate2.dyndns.org:8181/rrd/png4.png");
+    	}
+    }
+    
  
 }
