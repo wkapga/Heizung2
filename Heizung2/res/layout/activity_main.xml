@@ -1,22 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+<TableRow>
 
-    <TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Bild:"
-    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text" />
+</TableRow>	
+
+<TableRow >
+    <Button
+        android:id="@+id/Button1"
+    	android:text="@string/Button1Text"
+    ></Button>
+    <Button
+        android:id="@+id/Button2"
+    	android:text="@string/Button2Text"
+    ></Button>
+    <Button
+        android:id="@+id/Button3"
+    	android:text="@string/Button3Text"
+    ></Button>
+    <Button
+        android:id="@+id/Button4"
+    	android:text="@string/Button4Text"
+    ></Button>
+ </TableRow>
+
+<TableRow >
+    <Button
+        android:id="@+id/Button5"
+    	android:text="@string/Button5Text"
+    ></Button>
+    <Button
+        android:id="@+id/Button6"
+    	android:text="@string/Button6Text"
+    ></Button>
+    <Button
+        android:id="@+id/Button7"
+    	android:text="@string/Button7Text"
+    ></Button>
+ </TableRow>
+
+
+
     
-<ImageView 
-    android:id="@+id/ImageView1" 
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent"
-    ></ImageView>
-
-
-</LinearLayout>
+    <TableRow>
+    <ImageView
+        android:id="@+id/ImageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </ImageView>
+    </TableRow>
+    
+</TableLayout>
