@@ -69,7 +69,7 @@ public class MainActivity extends Activity  implements OnClickListener {
         
         grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+sel2+".png";
                 
-        UrlImageViewHelper.setUrlDrawable(imgView, grafurl);
+        UrlImageViewHelper.setUrlDrawable(imgView, grafurl, null ,60000);
         
         
     }
@@ -99,7 +99,7 @@ public class MainActivity extends Activity  implements OnClickListener {
 
     	grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+sel2+".png";
         
-        UrlImageViewHelper.setUrlDrawable(imgView, grafurl);
+        UrlImageViewHelper.setUrlDrawable(imgView, grafurl, null ,60000);
     
     
     
