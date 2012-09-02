@@ -4,9 +4,9 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Heizung2</string>
     <string name="Button1Text">Solar</string>
-    <string name="Button2Text">Heizung</string>
-    <string name="Button3Text">Warmw.</string>
-    <string name="Button4Text">Elektro</string>
+    <string name="Button2Text">Heiz.</string>
+    <string name="Button3Text">WW</string>
+    <string name="Button4Text">Elektr.</string>
     <string name="Button5Text">kurz</string>
     <string name="Button6Text">mittel</string>
     <string name="Button7Text">lang</string>

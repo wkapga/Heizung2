@@ -3,6 +3,8 @@ package com.github.heizung2;
 import java.io.InputStream;
 import java.net.URL;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -70,7 +72,11 @@ public class MainActivity extends Activity  implements OnClickListener {
         grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+sel2+".png";
                 
         UrlImageViewHelper.setUrlDrawable(imgView, grafurl, R.drawable.loading ,60000);
-        
+       
+      /*  Bitmap bmap = BitmapFactory.decodeResource(imgView.getResources(), R.drawable.test);
+        Bitmap bMapScaled = Bitmap.createScaledBitmap(bmap, 150, 100, true);
+        imgView.setImageBitmap(bMapScaled);
+        */
         
     }
  
