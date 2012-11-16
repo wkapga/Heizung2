@@ -3,19 +3,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/TextView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/TextView1Text"
-            android:textSize="18dp"
-             />
-    
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/Button1"
@@ -46,18 +45,18 @@
         </Button>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/TextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TextView2Text"
-        android:textSize="18dp" />
     
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TextView2Text"
+            android:textSize="18dp" />
 
     <Button
         android:id="@+id/Button5"
@@ -81,7 +80,9 @@
 
     <ImageView
         android:id="@+id/ImageView1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:scaleType="centerInside" />
+
 </LinearLayout>
-    
