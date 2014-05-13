@@ -103,7 +103,7 @@ public class MainActivity extends Activity  implements OnClickListener {
     		sel2=3;
     	}
 
-    	grafurl="http://keyrate2.dyndns.org:8181/rrd/png"+sel1+sel2+".png";
+    	grafurl="http://keyrate2.duckdns.org:8181/rrd/png"+sel1+sel2+".png";
         
         UrlImageViewHelper.setUrlDrawable(imgView, grafurl, R.drawable.loading ,60000);
     
